@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% extends "AppCoder/index.html" %}
+
+    {%load static %}
+
+    {%block quecambia %}
+    <form action="/ProyectoFinal/buscar" method="GET">
+    {% csrf_token %}
+
+    <h2>Ingrese un numero</h2>
+    <p>Camada: <input type="number" name="camada" id= "camada"></p>
+   
+
+    <input type="submit" value="Buscar"></p>
+
+ </form>
+     {%endblock%}
+
+</body>
+</html>

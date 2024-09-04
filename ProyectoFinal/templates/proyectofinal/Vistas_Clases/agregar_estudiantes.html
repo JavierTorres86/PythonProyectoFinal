@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROFESORES</title>
+</head>
+<body>
+    {% extends "AppCoder/index.html" %}
+
+    {%load static %}
+
+    {%block quecambia %}
+    <form action="" method="POST">
+        {% csrf_token %}
+  
+    <h2>Ingrese un Estudiante</h2>
+    <p>Nombre: <input type="text" name="nombre"></p>
+    <p>Apellido: <input type="text" name="apellido"></p>
+    <p>Email: <input type="text" name="email"></p>
+
+    <input type="submit" value="Enviar"></p>
+
+    {%endblock%}
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% extends "AppCoder/index.html" %}
+
+    {%load static %}
+
+    {%block quecambia %}
+    {% for p in profesores %}
+
+    <p>Nombre: <i>{{ p.nombre }}</i></p>
+    <p>Apellido: <i>{{ p.apellido }}</i></p>
+    <p>Email: <i>{{ p.email }}</i></p>
+    <p>Profesion: <i>{{ p.profesion }}</i></p>
+
+    <button>
+        <a href="{% url 'Delete' p.id %}"> Eliminar</a>
+    </button>
+    <button>
+        <a href="{% url 'Edit' p.id %}">Editar</a>
+    </button>
+
+{% endfor %}
+
+<br>
+
+<button>
+<a href="{% url 'New' %}">Agregar otro Profesor</a>
+</button>
+
+    
+    {%endblock%}
+</body>
+</html>

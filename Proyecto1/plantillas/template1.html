@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>HOLA MUNDO DESDE LA PLANTILLA</h1>
+    <P>Hola, esta es nuestra primer plantilla</P>
+
+    <p style="color:blue"> Mi nombre es: {{nombre}}</p>
+    <p style="color:red"> Mi apellido es: {{apellido}}</p>
+    <p style="color:violet"> Este Template fue creado: {{hoy}}</p>
+
+    <h3>Estas son mis notas de la Universidad</h3>
+    <p style="color:teal">
+        {%for n in notas %}
+
+        {{n}}
+        <br/>
+
+    {% endfor %}
+
+    </p>
+    <h3>Estas son mis notas de la Universidad</h3>
+    <p style="color:teal">
+        {%for n in notas %}
+
+        {% if n < 4 %}
+            <p style="color: red;">NOTA MALA {{n}}</p>
+            {% else %} <p style="color: green;">NOTA BUENA {{n}}</p>
+            {% endif %}
+
+
+    {% endfor %}
+
+    </p>
+
+
+</body>
+</html>

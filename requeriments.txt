@@ -1,0 +1,3 @@
+#Python Version xx
+
+django==4.2
