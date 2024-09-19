@@ -9,3 +9,4 @@ urlpatterns = [
     path('edit/', views.editar_perfil, name="EditarPerfil"),
     path('cambiar_pass/', views.CambiarContrasenia.as_view(), name="CambiarPass")
 ]
+

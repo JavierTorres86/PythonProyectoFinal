@@ -42,7 +42,7 @@ def register(request):
         form = UserRegisterForm(request.POST)
         if form.is_valid():
             form.save()
-            return render(request,"AppCoder/index.html" )
+            return render(request,"ProyectoFinal/index.html" )
         
         msg_register = "Error en los datos ingresados"
 
@@ -70,7 +70,7 @@ def editar_perfil(request):
                     avatar.save()  
 
             miFormulario.save()
-            return render(request, "AppCoder/index.html")
+            return render(request, "ProyectoFinal/index.html")
 
     else: 
         miFormulario = UserEditForm(instance=usuario)
